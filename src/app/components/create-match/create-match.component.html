@@ -1,0 +1,30 @@
+<form class="full-size-centered">
+    <div id="form-container">
+        <h1 class="text-center color-alt"><strong>Nuevo Partido</strong></h1>
+        <br><br>
+        <div class="full-width flex">
+            <div class="width-50 justify-center">
+                <select name="local" [(ngModel)]="local" [ngModelOptions]="{standalone: true}">
+                    <option value="" selected>Local</option>
+                    <option value="{{equipo.id}}" *ngFor="let equipo of equipos">{{ equipo.nombre }}</option>
+                </select>
+            </div>
+            <div class="width-50 justify-center">
+                <select name="visitante" [(ngModel)]="visitante" [ngModelOptions]="{standalone: true}">
+                    <option value="" selected>Visitante</option>
+                    <option value="{{equipo.id}}" *ngFor="let equipo of equipos">{{ equipo.nombre }}</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="full-width justify-center" [ngStyle]="{'margin-top.rem': 1, 'margin-bottom.rem': 1}">
+            <input type="date" [(ngModel)]="fecha" [ngModelOptions]="{standalone: true}">
+        </div>
+        <br>
+        <p class="color-alt text-center"><strong>{{ error }}</strong></p>
+        <br>
+        <div class="justify-center">
+            <button class="button-main" (click)="save()"><i class="fas fa-save"></i> Registrar</button>
+        </div>
+    </div>    
+</form>

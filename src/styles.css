@@ -1,0 +1,108 @@
+body{
+    background-color: #161A1D;
+    color: white;
+    overflow: hidden;
+}
+
+.color-alt{
+    color: #E53935;
+}
+
+input, select{
+    display: block;
+    width: 80%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: white;
+    border-radius: .25rem;
+    border: 2px solid #161A1D;
+    text-align: center;
+    font-weight: bold;
+    transition: all .5s;
+}
+
+input:focus{
+    border: 2px solid#E53935;
+}
+
+input:focus-visible{
+    outline: none;
+}
+
+.text-center{
+    text-align: center;
+}
+
+button, .button{
+    font-weight: bold;
+    padding: .375rem .75rem;
+    border-radius: .5rem;
+    border: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    user-select: none;
+    cursor: pointer;
+}
+
+.button-main{
+    background-color: #E53935;
+    color: white;    
+}
+
+.justify-center{
+    display: flex;
+    justify-content: center;
+}
+
+.items-center{
+    align-items: center;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.text-large{
+    font-size: 4rem;;
+}
+
+a{
+    text-decoration: none;
+    color: #E53935;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.full-size-centered{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.width-50{
+    width: 50%;
+}
+
+.flex{
+    display: flex;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+background: #E53935;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #d41310;
+}

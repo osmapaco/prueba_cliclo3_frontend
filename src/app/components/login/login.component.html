@@ -1,0 +1,18 @@
+<form class="full-size-centered">
+    <div id="form-container">
+        <h1 class="text-center color-alt"><strong>Iniciar Sesión</strong></h1>
+        <div class="justify-center">
+            <input type="text" placeholder="Nombre de Usuario" [(ngModel)]="username" name="username" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="justify-center">
+            <input type="password" placeholder="Contraseña" [(ngModel)]="password" name="password" [ngModelOptions]="{standalone: true}">        
+        </div>
+        <div class="justify-center">
+            <button class="button-main" (click)="login()"><i class="fas fa-sign-in-alt"></i> Ingresar</button>
+        </div>
+        <br>
+        <div class="justify-center">
+            <a href="/signup">Registrarme</a>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,22 @@
+<form class="full-size-centered">
+    <div id="form-container">
+        <h1 class="color-alt text-center text-large">Definir Marcador</h1>
+        <br><br>
+        <h1 class="text-center"><strong>{{partido.nombreLocal}}&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;{{partido.nombreVisitante}}</strong></h1>
+        <br>
+        <h2 class="text-center">{{partido.fecha}}</h2>
+        <br><br>
+        <div class="full-width flex">
+            <div class="width-50 justify-center">
+                <input type="text" placeholder="Goles ({{partido.nombreLocal}})" [(ngModel)]="local" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="width-50 justify-center">
+                <input type="text" placeholder="Goles ({{partido.nombreVisitante}})" [(ngModel)]="visitante" [ngModelOptions]="{standalone: true}">
+            </div>
+        </div>
+        <br><br>
+        <div class="fill-width justify-center">
+            <button class="button-main" (click)="save()">Guardar</button>
+        </div>        
+    </div>
+</form>

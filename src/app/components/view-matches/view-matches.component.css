@@ -1,0 +1,16 @@
+#form-container{
+    width: 50%;
+}
+
+#tabla-partidos{
+    overflow-y: scroll;
+    max-height: 75vh;
+}
+
+#tabla-partidos .header{
+    font-size: 2rem;
+}
+
+#tabla-partidos .body{
+    font-size: 1.5rem;
+}

@@ -1,0 +1,29 @@
+.menu-option{
+    width: 15rem;
+    height: 15rem;
+    background-color: #E53935;
+    color: white;
+    margin: 0 1rem;
+    font-size: 5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .75rem;
+    cursor: pointer;
+    transition: .5s all;
+}
+
+.menu-option:hover{
+    opacity: .6;
+}
+
+.menu-option i{
+    font-size: 5rem !important;
+}
+
+.menu-option p{
+    font-size: 2.5rem;
+    margin: 0;
+}   
+

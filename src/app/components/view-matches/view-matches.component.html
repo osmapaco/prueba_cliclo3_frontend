@@ -1,0 +1,51 @@
+<div class="full-size-centered">
+    <div id="form-container">
+        <h1 class="text-center color-alt"><strong>Historial de partidos</strong></h1>
+        <br><br>
+        <div id="tabla-partidos">
+            <div class="full-width flex header">
+                <div [ngStyle]="{'width.%': 16.6666}">
+                    <p class="text-center"><strong>ID</strong></p>
+                </div>
+                <div [ngStyle]="{'width.%': 16.6666}">
+                    <p class="text-center"><strong>Usuario</strong></p>
+                </div>
+                <div [ngStyle]="{'width.%': 16.6666}">
+                    <p class="text-center"><strong>Local</strong></p>
+                </div>
+                <div [ngStyle]="{'width.%': 16.6666}">
+                    <p class="text-center"><strong>Visitante</strong></p>
+                </div>
+                <div [ngStyle]="{'width.%': 16.6666}">
+                    <p class="text-center"><strong>Fecha</strong></p>
+                </div>
+                <div [ngStyle]="{'width.%': 16.6666}">
+                    <p class="text-center"><strong>Marcador</strong></p>
+                </div>
+            </div>
+            <div class="full-width flex body" *ngFor="let partido of partidos">
+                <div [ngStyle]="{'width.%': 16.6666}">
+                    <p class="text-center">{{partido.id}}</p>
+                </div>
+                <div [ngStyle]="{'width.%': 16.6666}">
+                    <p class="text-center">{{partido.nombreUsuario}}</p>
+                </div>
+                <div [ngStyle]="{'width.%': 16.6666}">
+                    <p class="text-center">{{partido.nombreLocal}}</p>
+                </div>
+                <div [ngStyle]="{'width.%': 16.6666}">
+                    <p class="text-center">{{partido.nombreVisitante}}</p>
+                </div>
+                <div [ngStyle]="{'width.%': 16.6666}">
+                    <p class="text-center">{{partido.fecha}}</p>
+                </div>
+                <div [ngStyle]="{'width.%': 16.6666}" class="d-flex justify-center items-center">
+                    <p class="text-center" *ngIf="partido.golesLocal != null && partido.golesVisitante != null">{{partido.golesLocal + '-' + partido.golesVisitante}}</p>
+                    <a href="/score/{{partido.id}}" *ngIf="partido.golesLocal == null && partido.golesVisitante == null">
+                        <div class="button button-main">Definir</div>
+                    </a>
+                </div>
+            </div>
+        </div>        
+    </div>    
+</div>
